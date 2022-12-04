@@ -6,18 +6,11 @@ using System.Threading.Tasks;
 
 namespace StrohmeyerFinalProject
 {
-    internal class Task
+    public class Task
     {
-
-        /*
-         *This digital task organizer will use a Priority queue to store the task objects.
-         * Users will be able to create, edit, set priorities, and due dates to tasks.
-         * This program will also have functionality for sorting the tasks by priority, due date, and more using a Linked list.
-         *ddd
-         */
-
+        //properties
         private string taskId;// may not need this
-        private int pri;
+        private int pri;// 0, 1, 2, 3// may not need this either???
         private DateTime dueDate;
         private string title;
         //private string description;
@@ -57,7 +50,11 @@ namespace StrohmeyerFinalProject
         //default constructor
         public Task()
         {
-
+            this.Pri = 0;
+            this.DateCreated = DateTime.Now;
+            this.DueDate = DateTime.Now.AddDays(7);
+            this.Title = "";
         }
+
     }
 }
