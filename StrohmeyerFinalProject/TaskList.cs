@@ -11,18 +11,19 @@ namespace StrohmeyerFinalProject
         //Linked list to store tasks
         private LinkedList<Task> tl;
         public TaskList() {
-            
+            tl = new LinkedList<Task>();
         
         }
 
         //method create
-        public void CreateTask()
+        public void CreateTask(string id, int pri, string title, DateTime due)
         {
-            Task task = new Task();
+            Task task = new Task(pri, title, due);
+            task.TaskId = id;
             tl.AddLast(task);
         }
 
-        //method edit due date
+        //method set due date
         public void editDueDate(string id, DateTime date) { 
             var task = tl.Where(task => task.TaskId == id).First();
             task.DueDate = date;
@@ -42,6 +43,11 @@ namespace StrohmeyerFinalProject
             var task = tl.Where(task => task.TaskId == id).First();
             task.Title = title;
 
+        }
+        //get task by id
+        public Task getTask(string id)
+        {
+            return tl.Where(task => task.TaskId == id).First();
         }
 
         //todo: sort by pri

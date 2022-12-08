@@ -48,12 +48,14 @@ namespace StrohmeyerFinalProject
         }
 
         //default constructor
-        public Task()
+        public Task(int pri, string title, DateTime due)
         {
-            this.Pri = 0;
-            this.DateCreated = DateTime.Now;
-            this.DueDate = DateTime.Now.AddDays(7);
-            this.Title = "";
+            // does it need to be this.taskid ect?
+            
+            Pri = pri;
+            DateCreated = DateTime.Now;
+            DueDate = due;
+            Title = title;
         }
 
     }
