@@ -11,8 +11,14 @@ namespace StrohmeyerFinalProject
         //Linked list to store tasks
         private LinkedList<Task> tl;
         public TaskList() {
-            tl = new LinkedList<Task>();
+            Tl = new LinkedList<Task>();
         
+        }
+
+        public LinkedList<Task> Tl
+        {
+            get => tl;
+            set => tl = value;
         }
 
         //method create
@@ -20,19 +26,19 @@ namespace StrohmeyerFinalProject
         {
             Task task = new Task(pri, title, due);
             task.TaskId = id;
-            tl.AddLast(task);
+            Tl.AddLast(task);
         }
 
         //method set due date
         public void editDueDate(string id, DateTime date) { 
-            var task = tl.Where(task => task.TaskId == id).First();
+            var task = Tl.Where(task => task.TaskId == id).First();
             task.DueDate = date;
         }
 
         //method set priority
         public void setPri(string id, int pri)
         {
-            var task = tl.Where(task => task.TaskId == id).First();
+            var task = Tl.Where(task => task.TaskId == id).First();
             task.Pri = pri;
 
         }
@@ -40,23 +46,28 @@ namespace StrohmeyerFinalProject
         //method set priority
         public void editTitle(string id, string title)
         {
-            var task = tl.Where(task => task.TaskId == id).First();
+            var task = Tl.Where(task => task.TaskId == id).First();
             task.Title = title;
 
         }
         //get task by id
         public Task getTask(string id)
         {
-            return tl.Where(task => task.TaskId == id).First();
+            return Tl.Where(task => task.TaskId == id).First();
+        }
+        //delete task by id
+        public void deleteTask(string id)
+        {
+            Tl.Remove(Tl.Where(task => task.TaskId == id).First());
         }
 
-        //todo: sort by pri
+        //todo: sort by pri////////////////////////////////////
         public PriorityQueue<Task, int> SortByPri(LinkedList<Task> tl)
         {
             PriorityQueue<Task, int> pq = new PriorityQueue<Task, int>();
             foreach (Task t in tl)
             {
-                pq.Enqueue(t, t.Pri);
+                pq.Enqueue(t, -t.Pri);
             }
             return pq;
         }

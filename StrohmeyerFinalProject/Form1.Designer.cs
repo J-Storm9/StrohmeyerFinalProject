@@ -36,7 +36,14 @@
             this.radioButtonHigh = new System.Windows.Forms.RadioButton();
             this.radioButtonMedium = new System.Windows.Forms.RadioButton();
             this.radioButtonLow = new System.Windows.Forms.RadioButton();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.id = new System.Windows.Forms.ColumnHeader();
+            this._title = new System.Windows.Forms.ColumnHeader();
+            this._pri = new System.Windows.Forms.ColumnHeader();
+            this._due = new System.Windows.Forms.ColumnHeader();
+            this._created = new System.Windows.Forms.ColumnHeader();
+            this.editButton = new System.Windows.Forms.Button();
+            this.removeTaskBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CreateTask
@@ -118,20 +125,85 @@
             this.radioButtonLow.Text = "Low";
             this.radioButtonLow.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // listView1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(389, 238);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(143, 137);
-            this.richTextBox1.TabIndex = 10;
-            this.richTextBox1.Text = "";
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.id,
+            this._title,
+            this._pri,
+            this._due,
+            this._created});
+            this.listView1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.listView1.FullRowSelect = true;
+            this.listView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.listView1.Location = new System.Drawing.Point(297, 12);
+            this.listView1.MultiSelect = false;
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(467, 275);
+            this.listView1.TabIndex = 11;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listView1_ColumnClick);
+         
+            // 
+            // id
+            // 
+            this.id.DisplayIndex = 4;
+            this.id.Text = "Id";
+            // 
+            // _title
+            // 
+            this._title.DisplayIndex = 0;
+            this._title.Text = "Title";
+            this._title.Width = 100;
+            // 
+            // _pri
+            // 
+            this._pri.DisplayIndex = 1;
+            this._pri.Text = "Priority";
+            this._pri.Width = 50;
+            // 
+            // _due
+            // 
+            this._due.DisplayIndex = 2;
+            this._due.Text = "Due date";
+            this._due.Width = 110;
+            // 
+            // _created
+            // 
+            this._created.DisplayIndex = 3;
+            this._created.Text = "Created";
+            this._created.Width = 110;
+            // 
+            // editButton
+            // 
+            this.editButton.Location = new System.Drawing.Point(297, 293);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(68, 53);
+            this.editButton.TabIndex = 12;
+            this.editButton.Text = "Edit";
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            // 
+            // removeTaskBtn
+            // 
+            this.removeTaskBtn.Location = new System.Drawing.Point(371, 293);
+            this.removeTaskBtn.Name = "removeTaskBtn";
+            this.removeTaskBtn.Size = new System.Drawing.Size(166, 53);
+            this.removeTaskBtn.TabIndex = 14;
+            this.removeTaskBtn.Text = "Complete Selected Task";
+            this.removeTaskBtn.UseMnemonic = false;
+            this.removeTaskBtn.UseVisualStyleBackColor = true;
+            this.removeTaskBtn.Click += new System.EventHandler(this.removeTaskBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.removeTaskBtn);
+            this.Controls.Add(this.editButton);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.radioButtonLow);
             this.Controls.Add(this.radioButtonMedium);
             this.Controls.Add(this.radioButtonHigh);
@@ -141,7 +213,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.CreateTask);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Tasks";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -158,6 +230,13 @@
         private RadioButton radioButtonHigh;
         private RadioButton radioButtonMedium;
         private RadioButton radioButtonLow;
-        private RichTextBox richTextBox1;
+        private ListView listView1;
+        private ColumnHeader _title;
+        private ColumnHeader _created;
+        private ColumnHeader _pri;
+        private ColumnHeader _due;
+        private Button editButton;
+        private Button removeTaskBtn;
+        private ColumnHeader id;
     }
 }
