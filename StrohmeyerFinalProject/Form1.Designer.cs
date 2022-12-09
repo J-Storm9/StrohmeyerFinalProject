@@ -49,7 +49,7 @@
             // 
             // CreateTask
             // 
-            this.CreateTask.Location = new System.Drawing.Point(190, 94);
+            this.CreateTask.Location = new System.Drawing.Point(157, 95);
             this.CreateTask.Name = "CreateTask";
             this.CreateTask.Size = new System.Drawing.Size(80, 29);
             this.CreateTask.TabIndex = 1;
@@ -59,7 +59,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(39, 65);
+            this.dateTimePicker1.Location = new System.Drawing.Point(6, 66);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(231, 23);
             this.dateTimePicker1.TabIndex = 2;
@@ -68,7 +68,7 @@
             // title
             // 
             this.title.AutoSize = true;
-            this.title.Location = new System.Drawing.Point(39, 19);
+            this.title.Location = new System.Drawing.Point(6, 20);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(29, 15);
             this.title.TabIndex = 4;
@@ -78,7 +78,7 @@
             // pri
             // 
             this.pri.AutoSize = true;
-            this.pri.Location = new System.Drawing.Point(39, 42);
+            this.pri.Location = new System.Drawing.Point(6, 43);
             this.pri.Name = "pri";
             this.pri.Size = new System.Drawing.Size(45, 15);
             this.pri.TabIndex = 5;
@@ -87,7 +87,7 @@
             // 
             // titleTextbox
             // 
-            this.titleTextbox.Location = new System.Drawing.Point(74, 11);
+            this.titleTextbox.Location = new System.Drawing.Point(41, 12);
             this.titleTextbox.Name = "titleTextbox";
             this.titleTextbox.Size = new System.Drawing.Size(196, 23);
             this.titleTextbox.TabIndex = 6;
@@ -96,7 +96,7 @@
             // radioButtonHigh
             // 
             this.radioButtonHigh.AutoSize = true;
-            this.radioButtonHigh.Location = new System.Drawing.Point(90, 40);
+            this.radioButtonHigh.Location = new System.Drawing.Point(57, 41);
             this.radioButtonHigh.Name = "radioButtonHigh";
             this.radioButtonHigh.Size = new System.Drawing.Size(51, 19);
             this.radioButtonHigh.TabIndex = 7;
@@ -107,7 +107,7 @@
             // radioButtonMedium
             // 
             this.radioButtonMedium.AutoSize = true;
-            this.radioButtonMedium.Location = new System.Drawing.Point(147, 40);
+            this.radioButtonMedium.Location = new System.Drawing.Point(114, 41);
             this.radioButtonMedium.Name = "radioButtonMedium";
             this.radioButtonMedium.Size = new System.Drawing.Size(70, 19);
             this.radioButtonMedium.TabIndex = 8;
@@ -118,7 +118,7 @@
             // radioButtonLow
             // 
             this.radioButtonLow.AutoSize = true;
-            this.radioButtonLow.Location = new System.Drawing.Point(223, 40);
+            this.radioButtonLow.Location = new System.Drawing.Point(190, 41);
             this.radioButtonLow.Name = "radioButtonLow";
             this.radioButtonLow.Size = new System.Drawing.Size(47, 19);
             this.radioButtonLow.TabIndex = 9;
@@ -137,7 +137,7 @@
             this.listView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.listView1.FullRowSelect = true;
             this.listView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.listView1.Location = new System.Drawing.Point(297, 5);
+            this.listView1.Location = new System.Drawing.Point(243, 12);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(467, 282);
@@ -177,7 +177,7 @@
             // 
             // editButton
             // 
-            this.editButton.Location = new System.Drawing.Point(297, 293);
+            this.editButton.Location = new System.Drawing.Point(243, 300);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(68, 53);
             this.editButton.TabIndex = 12;
@@ -187,7 +187,7 @@
             // 
             // removeTaskBtn
             // 
-            this.removeTaskBtn.Location = new System.Drawing.Point(371, 293);
+            this.removeTaskBtn.Location = new System.Drawing.Point(317, 300);
             this.removeTaskBtn.Name = "removeTaskBtn";
             this.removeTaskBtn.Size = new System.Drawing.Size(166, 53);
             this.removeTaskBtn.TabIndex = 14;
@@ -198,7 +198,7 @@
             // 
             // buttonClose
             // 
-            this.buttonClose.Location = new System.Drawing.Point(696, 293);
+            this.buttonClose.Location = new System.Drawing.Point(642, 300);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(68, 53);
             this.buttonClose.TabIndex = 15;
@@ -210,7 +210,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(767, 352);
+            this.ClientSize = new System.Drawing.Size(717, 355);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.removeTaskBtn);
             this.Controls.Add(this.editButton);

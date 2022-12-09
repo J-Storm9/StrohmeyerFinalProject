@@ -30,14 +30,14 @@ namespace StrohmeyerFinalProject
 
             Task t = f1.taskList.getTask(id);
             t.Title = textBoxTitle.Text;
-            if (radioButtonHigh.Text == "1")
+            if (radioButtonLowEdit.Checked)
             {
                 t.Pri = 1;
-            } else if (radioButtonHigh.Text == "2")
+            } else if (radioButtonMedEdit.Checked)
             {
                 t.Pri = 2;
             }
-            else if (radioButtonHigh.Text == "3")
+            else if (radioButtonHighEdit.Checked)
             {
                 t.Pri = 3;
             }

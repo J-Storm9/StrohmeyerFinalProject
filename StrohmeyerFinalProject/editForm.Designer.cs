@@ -31,9 +31,9 @@
             this.title = new System.Windows.Forms.Label();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButtonHigh = new System.Windows.Forms.RadioButton();
-            this.radioButtonMed = new System.Windows.Forms.RadioButton();
-            this.radioButtonLow = new System.Windows.Forms.RadioButton();
+            this.radioButtonHighEdit = new System.Windows.Forms.RadioButton();
+            this.radioButtonMedEdit = new System.Windows.Forms.RadioButton();
+            this.radioButtonLowEdit = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePickerDue = new System.Windows.Forms.DateTimePicker();
             this.buttonSave = new System.Windows.Forms.Button();
@@ -66,38 +66,38 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Priority";
             // 
-            // radioButtonHigh
+            // radioButtonHighEdit
             // 
-            this.radioButtonHigh.AutoSize = true;
-            this.radioButtonHigh.Location = new System.Drawing.Point(56, 35);
-            this.radioButtonHigh.Name = "radioButtonHigh";
-            this.radioButtonHigh.Size = new System.Drawing.Size(51, 19);
-            this.radioButtonHigh.TabIndex = 3;
-            this.radioButtonHigh.TabStop = true;
-            this.radioButtonHigh.Text = "High";
-            this.radioButtonHigh.UseVisualStyleBackColor = true;
+            this.radioButtonHighEdit.AutoSize = true;
+            this.radioButtonHighEdit.Location = new System.Drawing.Point(56, 35);
+            this.radioButtonHighEdit.Name = "radioButtonHighEdit";
+            this.radioButtonHighEdit.Size = new System.Drawing.Size(51, 19);
+            this.radioButtonHighEdit.TabIndex = 3;
+            this.radioButtonHighEdit.TabStop = true;
+            this.radioButtonHighEdit.Text = "High";
+            this.radioButtonHighEdit.UseVisualStyleBackColor = true;
             // 
-            // radioButtonMed
+            // radioButtonMedEdit
             // 
-            this.radioButtonMed.AutoSize = true;
-            this.radioButtonMed.Location = new System.Drawing.Point(113, 35);
-            this.radioButtonMed.Name = "radioButtonMed";
-            this.radioButtonMed.Size = new System.Drawing.Size(70, 19);
-            this.radioButtonMed.TabIndex = 4;
-            this.radioButtonMed.TabStop = true;
-            this.radioButtonMed.Text = "Medium";
-            this.radioButtonMed.UseVisualStyleBackColor = true;
+            this.radioButtonMedEdit.AutoSize = true;
+            this.radioButtonMedEdit.Location = new System.Drawing.Point(113, 35);
+            this.radioButtonMedEdit.Name = "radioButtonMedEdit";
+            this.radioButtonMedEdit.Size = new System.Drawing.Size(70, 19);
+            this.radioButtonMedEdit.TabIndex = 4;
+            this.radioButtonMedEdit.TabStop = true;
+            this.radioButtonMedEdit.Text = "Medium";
+            this.radioButtonMedEdit.UseVisualStyleBackColor = true;
             // 
-            // radioButtonLow
+            // radioButtonLowEdit
             // 
-            this.radioButtonLow.AutoSize = true;
-            this.radioButtonLow.Location = new System.Drawing.Point(185, 35);
-            this.radioButtonLow.Name = "radioButtonLow";
-            this.radioButtonLow.Size = new System.Drawing.Size(47, 19);
-            this.radioButtonLow.TabIndex = 5;
-            this.radioButtonLow.TabStop = true;
-            this.radioButtonLow.Text = "Low";
-            this.radioButtonLow.UseVisualStyleBackColor = true;
+            this.radioButtonLowEdit.AutoSize = true;
+            this.radioButtonLowEdit.Location = new System.Drawing.Point(185, 35);
+            this.radioButtonLowEdit.Name = "radioButtonLowEdit";
+            this.radioButtonLowEdit.Size = new System.Drawing.Size(47, 19);
+            this.radioButtonLowEdit.TabIndex = 5;
+            this.radioButtonLowEdit.TabStop = true;
+            this.radioButtonLowEdit.Text = "Low";
+            this.radioButtonLowEdit.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -144,9 +144,9 @@
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.dateTimePickerDue);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.radioButtonLow);
-            this.Controls.Add(this.radioButtonMed);
-            this.Controls.Add(this.radioButtonHigh);
+            this.Controls.Add(this.radioButtonLowEdit);
+            this.Controls.Add(this.radioButtonMedEdit);
+            this.Controls.Add(this.radioButtonHighEdit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxTitle);
             this.Controls.Add(this.title);
@@ -163,9 +163,9 @@
         private Label title;
         public TextBox textBoxTitle;
         private Label label2;
-        public RadioButton radioButtonHigh;
-        public RadioButton radioButtonMed;
-        public RadioButton radioButtonLow;
+        public RadioButton radioButtonHighEdit;
+        public RadioButton radioButtonMedEdit;
+        public RadioButton radioButtonLowEdit;
         private Label label3;
         public DateTimePicker dateTimePickerDue;
         private Button buttonSave;

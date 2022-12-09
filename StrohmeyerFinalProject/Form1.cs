@@ -4,6 +4,7 @@ namespace StrohmeyerFinalProject
 {
     public partial class Form1 : Form
     {
+        // properties
         public TaskList taskList = new TaskList();
         private int runningTaskID = 0;
         public Form1()
@@ -20,7 +21,7 @@ namespace StrohmeyerFinalProject
             
         }
 
-        ////////////////////////////////CREATE TASK//////////////////////////////////////////////
+        ////////////////////////////////CREATE TASK///////////////////////////
         private void button1_Click(object sender, EventArgs e)
         {
             // set priority based on user input
@@ -52,60 +53,40 @@ namespace StrohmeyerFinalProject
             item.SubItems.Add(taskList.getTask("t1"+runningTaskID).DateCreated.ToString());
             
             listView1.Items.Add(item);
-
-
-
-
-            //depricated listView1.Items.Add(taskList.getTask("t1" + runningTaskID).Title);
-
+            
             //iterate task id
             runningTaskID++;
 
-            // TESTING CREATION OF TASK: REMOVE 
-           /** richTextBox1.Text = taskList.getTask("t10").TaskId + "\n"+
-                                taskList.getTask("t10").Title + "\n"+
-            taskList.getTask("t10").DateCreated + "\n"+
-            taskList.getTask("t10").DueDate + "\n"+
-            taskList.getTask("t10").Pri + "\n";
-           **/
         }
 
+        // auto generated methods
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        
+        private void titleTextbox_TextChanged(object sender, EventArgs e)
         {
             
         }
-
-        private void titleTextbox_TextChanged(object sender, EventArgs e)
-        {
-            //titleTextbox.Text =
-        }
-
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }
-
-       
-
         private void pri_Click(object sender, EventArgs e)
         {
 
         }
-
-        //todo check if a task is actually selected before executing code
+        
+        // complete/remove task
         private void removeTaskBtn_Click(object sender, EventArgs e)
         {
             try
             {
                 //show task id of completed task
-                MessageBox.Show(listView1.SelectedItems[0].Text.ToString());
+                MessageBox.Show(listView1.SelectedItems[0].Text + " Completed!" );
                 //remove task from linked list
-                taskList.deleteTask(listView1.SelectedItems[0].Text.ToString());
+                taskList.deleteTask(listView1.SelectedItems[0].Text);
                 //remove task from listView
                 listView1.Items.Remove(listView1.SelectedItems[0]);
             }
@@ -177,15 +158,15 @@ namespace StrohmeyerFinalProject
                     editForm.textBoxTitle.Text = t.Title.ToString();
                     if (t.Pri == 1)
                     {
-                        editForm.radioButtonLow.Checked = true;
+                        editForm.radioButtonLowEdit.Checked = true;
                     }
                     else if (t.Pri == 2)
                     {
-                        editForm.radioButtonMed.Checked = true;
+                        editForm.radioButtonMedEdit.Checked = true;
                     }
                     else if (t.Pri == 3)
                     {
-                        editForm.radioButtonHigh.Checked = true;
+                        editForm.radioButtonHighEdit.Checked = true;
                     }
 
                     editForm.dateTimePickerDue.Value = t.DueDate;
