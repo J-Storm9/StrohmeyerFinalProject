@@ -4,7 +4,7 @@ namespace StrohmeyerFinalProject
 {
     public partial class Form1 : Form
     {
-        TaskList taskList = new TaskList();
+        public TaskList taskList = new TaskList();
         private int runningTaskID = 0;
         public Form1()
         {
@@ -12,6 +12,8 @@ namespace StrohmeyerFinalProject
             
            
         }
+
+      
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -98,12 +100,19 @@ namespace StrohmeyerFinalProject
         //todo check if a task is actually selected before executing code
         private void removeTaskBtn_Click(object sender, EventArgs e)
         {
-            //show task id of completed task
-            MessageBox.Show(listView1.SelectedItems[0].Text.ToString());
-            //remove task from linked list
-            taskList.deleteTask(listView1.SelectedItems[0].Text.ToString());
-            //remove task from listView
-            listView1.Items.Remove(listView1.SelectedItems[0]);
+            try
+            {
+                //show task id of completed task
+                MessageBox.Show(listView1.SelectedItems[0].Text.ToString());
+                //remove task from linked list
+                taskList.deleteTask(listView1.SelectedItems[0].Text.ToString());
+                //remove task from listView
+                listView1.Items.Remove(listView1.SelectedItems[0]);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No task selected");
+            }
         }
 
         private void listView1_ColumnClick(object sender, ColumnClickEventArgs e)
@@ -155,12 +164,47 @@ namespace StrohmeyerFinalProject
         
         private void editButton_Click(object sender, EventArgs e)
         {
-            //find the task selected
-            Task t = taskList.getTask(listView1.SelectedItems[0].Text.ToString());
-            //
-            MessageBox.Show(t.Title);
             
+                //find the task selected
+                try
+                {
+                    Task t = taskList.getTask(listView1.SelectedItems[0].Text.ToString());
 
+                    // create new instance of editForm class
+                    editForm editForm = new editForm(this);
+
+                    // pass task info from form1 to editForm
+                    editForm.textBoxTitle.Text = t.Title.ToString();
+                    if (t.Pri == 1)
+                    {
+                        editForm.radioButtonLow.Checked = true;
+                    }
+                    else if (t.Pri == 2)
+                    {
+                        editForm.radioButtonMed.Checked = true;
+                    }
+                    else if (t.Pri == 3)
+                    {
+                        editForm.radioButtonHigh.Checked = true;
+                    }
+
+                    editForm.dateTimePickerDue.Value = t.DueDate;
+
+                    editForm.id = t.TaskId;
+
+
+                    editForm.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("No task selected");
+                }
+            
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

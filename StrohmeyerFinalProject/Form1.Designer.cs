@@ -44,6 +44,7 @@
             this._created = new System.Windows.Forms.ColumnHeader();
             this.editButton = new System.Windows.Forms.Button();
             this.removeTaskBtn = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CreateTask
@@ -136,15 +137,14 @@
             this.listView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.listView1.FullRowSelect = true;
             this.listView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.listView1.Location = new System.Drawing.Point(297, 12);
+            this.listView1.Location = new System.Drawing.Point(297, 5);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(467, 275);
+            this.listView1.Size = new System.Drawing.Size(467, 282);
             this.listView1.TabIndex = 11;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listView1_ColumnClick);
-         
             // 
             // id
             // 
@@ -196,11 +196,22 @@
             this.removeTaskBtn.UseVisualStyleBackColor = true;
             this.removeTaskBtn.Click += new System.EventHandler(this.removeTaskBtn_Click);
             // 
+            // buttonClose
+            // 
+            this.buttonClose.Location = new System.Drawing.Point(696, 293);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(68, 53);
+            this.buttonClose.TabIndex = 15;
+            this.buttonClose.Text = "Exit";
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(767, 352);
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.removeTaskBtn);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.listView1);
@@ -230,7 +241,7 @@
         private RadioButton radioButtonHigh;
         private RadioButton radioButtonMedium;
         private RadioButton radioButtonLow;
-        private ListView listView1;
+        public ListView listView1;
         private ColumnHeader _title;
         private ColumnHeader _created;
         private ColumnHeader _pri;
@@ -238,5 +249,6 @@
         private Button editButton;
         private Button removeTaskBtn;
         private ColumnHeader id;
+        private Button buttonClose;
     }
 }
